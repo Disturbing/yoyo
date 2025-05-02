@@ -5,6 +5,8 @@ export { ExampleMcpServer };
 // Worker entrypoint for handling incoming requests
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+
+		
     const url = new URL(request.url);
     const sessionIdStr = url.searchParams.get('sessionId')
     const id = sessionIdStr
